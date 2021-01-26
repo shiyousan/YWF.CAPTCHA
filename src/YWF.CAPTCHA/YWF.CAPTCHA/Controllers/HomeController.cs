@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace YWF.CAPTCHA.Controllers
+namespace YWF.CAPTCHA.Sample.Controllers
 {
     public class HomeController : Controller
     {

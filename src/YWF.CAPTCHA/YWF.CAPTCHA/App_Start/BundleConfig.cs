@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace YWF.CAPTCHA
+namespace YWF.CAPTCHA.Sample
 {
     public class BundleConfig
     {
