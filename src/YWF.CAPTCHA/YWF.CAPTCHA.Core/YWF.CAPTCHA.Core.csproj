@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CaptchaEnum.cs" />
+    <Compile Include="CaptchaCore.cs" />
+    <Compile Include="CaptchaTypeEnum.cs" />
     <Compile Include="CaptchaHelper.cs" />
     <Compile Include="CaptchaOption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

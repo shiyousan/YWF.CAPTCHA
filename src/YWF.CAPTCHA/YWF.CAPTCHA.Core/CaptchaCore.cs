@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YWF.CAPTCHA.Core
 {
-    class CaptchaEnum
+    class CaptchaCore
     {
     }
 }
