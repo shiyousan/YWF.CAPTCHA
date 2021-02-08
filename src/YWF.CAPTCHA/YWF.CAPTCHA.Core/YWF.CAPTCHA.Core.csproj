@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaptchaCore.cs" />
-    <Compile Include="CaptchaTypeEnum.cs" />
+    <Compile Include="CaptchaType.cs" />
     <Compile Include="CaptchaHelper.cs" />
     <Compile Include="CaptchaOption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
