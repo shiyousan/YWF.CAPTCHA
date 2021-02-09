@@ -8,5 +8,6 @@ namespace YWF.CAPTCHA.Core
 {
     public class CaptchaHelper
     {
+        
     }
 }
