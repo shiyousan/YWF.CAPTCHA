@@ -1,13 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using YWF.CAPTCHA.Core;
 
 namespace YWF.CAPTCHA.Sample.Controllers
 {
     public class WidgetController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        }
+        [HttpGet]
+        [Route("get-captcha-image")]
+        public ActionResult GetCaptchaImage()
+        {
+            int width = 100;
+            int height = 36;
+            var captchaCode = CaptchaCore.GenerateCaptchaCode();
+            var result = CaptchaCore.GenerateCaptchaImage(width, height, captchaCode);
+            HttpContext.Session["CaptchaCode"]= result.CaptchaCode;
+            Stream s = new MemoryStream(result.CaptchaByteData); 
+            return new FileStreamResult(s, "image/png");
+        }
+
         public ActionResult GetCaptcha()
         {
             return View();

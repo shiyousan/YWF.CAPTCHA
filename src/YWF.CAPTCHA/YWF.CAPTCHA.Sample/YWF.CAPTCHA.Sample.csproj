@@ -265,11 +265,11 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Widget\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Widget\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -279,6 +279,12 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YWF.CAPTCHA.Core\YWF.CAPTCHA.Core.csproj">
+      <Project>{3c7100d9-0ea6-4bab-8014-329758ba9805}</Project>
+      <Name>YWF.CAPTCHA.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,13 +56,11 @@ namespace YWF.CAPTCHA.Core
         /// 验证码噪点，默认干扰线和噪点
         /// </summary>
         public CaptchaNoiseStyle NoiseStyle { get; set; } = CaptchaNoiseStyle.Point | CaptchaNoiseStyle.Line;
-
         /// <summary>
         /// 验证码文本类型代码长度
         /// 默认且建议采用随机长度，可提高部分安全性，防止被简单破解
         /// </summary>
         public int CodeLength { get; set; } = GetRandomCodeLength();
-
         ///// <summary>
         ///// 验证码文本最小长度，大于等于该值
         ///// </summary>
@@ -89,5 +88,9 @@ namespace YWF.CAPTCHA.Core
         {
             return new Random().Next(min, max);
         }
+        /// <summary>
+        /// 验证码图片尺寸
+        /// </summary>
+        public Size ImageSize { get; set; }
     }
 }
