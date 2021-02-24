@@ -15,8 +15,8 @@ namespace YWF.CAPTCHA.Sample.Controllers
             return View();
         }
         [HttpGet]
-        [Route("get-captcha-image")]
-        public ActionResult GetCaptchaImage()
+        [Route("captcha")]
+        public ActionResult FetchCaptcha()
         {
             int width = 100;
             int height = 36;

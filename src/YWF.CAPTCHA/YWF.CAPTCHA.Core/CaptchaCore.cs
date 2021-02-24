@@ -10,6 +10,7 @@ using System.Web;
 
 namespace YWF.CAPTCHA.Core
 {
+
     public class CaptchaResult
     {
         public string CaptchaCode { get; set; }
@@ -19,6 +20,18 @@ namespace YWF.CAPTCHA.Core
     }
     public class CaptchaCore
     {
+        /// <summary>
+        /// 验证码字符
+        /// 1.考虑用户体验，默认避免数字0、1，英文字符i、I、o、O
+        /// 2.根据情况可自行在代码中设置，例如数字5、英文字符s、S也是容易混淆的字符
+        /// 3.推荐数字字符采用：23456789，英文字符采用：ABCDEFGHJKLMNPQRSTUVWXYZ
+        /// 4.其他要过滤和避免的字符/词语/连词，通过属性BanCodeLetters进行设置
+        /// </summary>
+        private const string codeLetters = "ABCDEFGHJKLMNPQRSTUVWXYZ";
+        private const string numberLetters = "23456789";
+        //----------------------------------------------------------------------
+
+
         const string Letters = "2346789ABCDEFGHJKLMNPRTUVWXYZ";
 
         public static string GenerateCaptchaCode()
@@ -50,7 +63,7 @@ namespace YWF.CAPTCHA.Core
             using (Bitmap baseMap = new Bitmap(width, height))
             using (Graphics graph = Graphics.FromImage(baseMap))
             {
-                Random rand = new Random();
+                Random rand = new Random(); 
 
                 graph.Clear(GetRandomLightColor());
 
