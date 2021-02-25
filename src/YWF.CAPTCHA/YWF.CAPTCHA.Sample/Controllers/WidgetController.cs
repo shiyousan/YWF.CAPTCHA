@@ -20,7 +20,7 @@ namespace YWF.CAPTCHA.Sample.Controllers
         {
             int width = 100;
             int height = 36;
-            var captchaCode = CaptchaCore.GenerateCaptchaCode();
+            var captchaCode = CaptchaCore.GenerateCode();
             var result = CaptchaCore.GenerateCaptchaImage(width, height, captchaCode);
             HttpContext.Session["CaptchaCode"]= result.CaptchaCode;
             Stream s = new MemoryStream(result.CaptchaByteData); 
@@ -36,7 +36,7 @@ namespace YWF.CAPTCHA.Sample.Controllers
             return null;
             //int width = 100;
             //int height = 36;
-            //var captchaCode = Captcha.GenerateCaptchaCode();
+            //var captchaCode = Captcha.GenerateCode();
             //var result = Captcha.GenerateCaptchaImage(width, height, captchaCode);
             //HttpContext.Session.SetString("CaptchaCode", result.CaptchaCode);
             //Stream stream = new MemoryStream(result.CaptchaByteData);

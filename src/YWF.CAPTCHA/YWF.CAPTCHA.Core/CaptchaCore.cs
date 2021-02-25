@@ -34,7 +34,7 @@ namespace YWF.CAPTCHA.Core
 
         const string Letters = "2346789ABCDEFGHJKLMNPRTUVWXYZ";
 
-        public static string GenerateCaptchaCode()
+        public static string GenerateCode()
         {
             Random rand = new Random();
             int maxRand = Letters.Length - 1;
