@@ -28,24 +28,6 @@ namespace System.Web.Mvc
             //return writer.InnerWriter.ToString();
 
             //return helper.ActionLink("", "Index", "Home");
-        }
-        /// <summary>
-        /// 根据当前url节点判断是否返回激活active样式
-        /// </summary>
-        /// <param name="helper"></param>
-        /// <param name="localPath"></param>
-        /// <param name="activeNode"></param>
-        /// <returns></returns>
-        public static MvcHtmlString SetNavbarActiveClass(this HtmlHelper helper, string localPath, params string[] activeNode)
-        {
-            if (string.IsNullOrWhiteSpace(localPath))
-            {
-                return new MvcHtmlString(string.Empty);
-            }
-            var nodeArr = localPath.Split('/');
-            var currentNode = nodeArr.Length > 1 ? nodeArr[1] : string.Empty;
-            string result = activeNode.Contains(currentNode) ? "active" : string.Empty;
-            return new MvcHtmlString(result);
-        }
+        }      
     }
 }
